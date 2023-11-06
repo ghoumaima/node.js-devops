@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         
-        DOCKERHUB_CREDENTIALS = credentials('DockerHub')
+        DOCKERHUB_CREDENTIALS = credentials('DOCKEROUMA')
     }
     stages {
         stage('Checkout'){
@@ -10,7 +10,7 @@ pipeline {
             steps{
                 
                 git branch: 'main', url:'https://github.com/ghoumaima/node.js-devops.git'
-            }
+
         }
         stage('Init'){
             steps{
